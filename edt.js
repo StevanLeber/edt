@@ -25,7 +25,13 @@ function longPoll_feed () {
 		});
 }
 
+function display_event (json) {
+	console.log('Update received!');
+}
+
+493806625145225222
 client.on('ready', () => {
+	console.log('I am ready!');
 	longPoll_feed();
 });
 
