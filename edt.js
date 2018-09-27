@@ -1,5 +1,6 @@
 const Discord = require('discord.js')
 const client = new Discord.Client()
+const planning = client.channels.find('id', 493806625145225222)
 
 function longPoll_feed () {
 	//make another request
@@ -26,12 +27,13 @@ function longPoll_feed () {
 }
 
 function display_event (json) {
-	console.log('Update received!');
+	planning.send('Update received!');
+	planning.send(json);
 }
 
 493806625145225222
 client.on('ready', () => {
-	console.log('I am ready!');
+	planning.send('I am ready!');
 	longPoll_feed();
 });
 
