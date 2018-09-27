@@ -1,1 +1,1 @@
-worker: node edt.js
+worker: node bot.js
