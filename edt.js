@@ -31,7 +31,14 @@ function display_event (json) {
 	planning.send(json);
 }
 
-493806625145225222
+client.on('message', message => {
+  // If the message is "ping"
+  if (message.content === 'ping') {
+    // Send "pong" to the same channel
+    message.channel.send('pong');
+  }
+});
+
 client.on('ready', () => {
 	planning.send('I am ready!');
 	longPoll_feed();
