@@ -15,7 +15,7 @@ function longPoll_feed () {
 			},
 			success: function (json) {
 				display_event(json);
-				
+
 				//if everything went well, begin another request immediately
 				//the server will take a long time to respond
 				//how long? well, it will wait until there is another message
@@ -27,8 +27,8 @@ function longPoll_feed () {
 }
 
 function display_event (json) {
-	planning.send('Update received!');
-	planning.send(json);
+	console.log('Update received!');
+	console.log(json);
 }
 
 client.on('message', message => {
@@ -40,7 +40,7 @@ client.on('message', message => {
 });
 
 client.on('ready', () => {
-	planning.send('I am ready!');
+	console.log('I am ready!');
 	longPoll_feed();
 });
 
