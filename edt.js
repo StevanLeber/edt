@@ -41,6 +41,7 @@ client.on('message', message => {
 
 client.on('ready', () => {
 	console.log('I am ready!');
+	client.channels.get('493806625145225222').send("coucou!")
 	//longPoll_feed();
 });
 
