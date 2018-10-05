@@ -25,8 +25,8 @@ function getPlanning() {
 }
 
 client.on('ready', () => {
-
-	planning.send(getPlanning());
+	var SAIM = getPlanning();
+	planning.send(SAIM);
 });
 
 client.login('NDk0ODQzNTE5NjUyMDY5Mzc3.Do5cHQ.t3if75PYjxPOVf13rSwFtGPCUF4');
