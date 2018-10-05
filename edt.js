@@ -1,11 +1,10 @@
 const Discord = require('discord.js')
 const client = new Discord.Client()
-const https = require('https')
 const planning = client.channels.get('493806625145225222')
 
 var FeedParser = require('feedparser');
 var request = require('request'); // for fetching the feed
-var req = request('http://somefeedurl.xml')
+var req = request('https://planning.univ-ubs.fr/direct/gwtdirectplanning/rss?data=bd72d825015315fe3d08f214effdde8df232d2abbea78b6a952dbe726aeb10c6dbbaf456c40409e5da98cf1172bf16b81a2e6e73a2ee14158758a151cfe0fb9a061f7968f1d954af')
 var feedparser = new FeedParser([options]);
 
 
